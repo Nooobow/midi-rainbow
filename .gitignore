@@ -7,6 +7,10 @@ wav/
 *.wav
 *.mp3
 
+# ignore nuitka build stuff
+nuitka-crash-report.xml
+main.dist/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
