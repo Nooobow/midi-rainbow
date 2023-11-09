@@ -55,7 +55,7 @@ class MidiPlayer:
         note_index = self._calculate_note_index(note)
         note_color_hex = self.NOTE_COLOR_MAPPING[note_name]
         note_color_rgb = self._hex_to_rgb(note_color_hex)
-        # print(f"{note_name} - {note_color_hex}")
+        print(f"{note_name} - {note_color_hex}")
         return (note_index % self.GRID_WIDTH, note_index // self.GRID_WIDTH, note_color_rgb)
 
     def _play_midi(self, midi_file_path):
@@ -106,7 +106,7 @@ class MIDIRainbow:
 
         # Initialize pygame and MIDI output
         pygame.init()
-        pygame.mixer.init()
+        
 
         # Set the name of the window
         pygame.display.set_caption('MIDI Rainbow')
@@ -199,5 +199,5 @@ class MIDIRainbow:
 
 
 if __name__ == "__main__":
-    game = MIDIRainbow()
-    game.start()
+    app = MIDIRainbow()
+    app.start()
